@@ -1,24 +1,27 @@
 # Ajokilsat
 
-Tämä on Expolla toteutettu so ellus ajokilometrien keräämiseen.
+Tämä on Expolla toteutettu sovellus ajokilometrien keräämiseen.
 Projektin tarkoitus on harjoitella kännykkäsovelluksien ohjelmointia.
-Expolla toteutettuna sovellus toimii Androidilla ja IOS:llä, mutta tähän mennessä sovellusta on testattu vain Androidilla.
+Expolla toteutettuna sovellus toimii Androidilla ja iOS:llä, mutta
+tähän mennessä sovellusta on testattu vain Androidilla.
 
 ## Tietomallit
 
-### Trip(Matka) 
+(*) = Pakollinen kenttä (muut ovat optionaalisia)
 
-- `vehicle` - ajoneuvo, jolla matka tehtiin
-- `odometerAtBegin` - matkamittarin lukema matkan alussa 
+### Trip (Matka)
+
+- `vehicle` (*) - ajoneuvo, jolla matka tehtiin
+- `description` (*) - matkan kuvaus
+- `timestampAtBegin` (*) - aikaleima matkan alussa
+- `timestampAtEnd` (*) - aikaleima matkan lopussa
+- `odometerAtBegin` - matkamittarin lukema matkan alussa
 - `odometerAtEnd` - matkamittarin lukema matkan lopussa
-- `timestampAtBegin` - aikaleima matkan alussa
-- `timestampAtEnd` - aikaleima matkan lopussa
-- `description` - matkan kuvaus
 - `routeDescription` - reitin kuvaus (tyyliin: "Turku-Raisio-Turku")
 - `track` - "jälki", johon tallennetaan matkan kulku
-    * Lista GPS-koordinaateista ja aikaleimoista
+   * Lista GPS-koordinaateista ja aikaleimoista
 
 ### Vehicle (Ajoneuvo)
 
-- `name` - nimi
+- `name` (*) - nimi
 - `registrationNumber` - rekisterinumero
